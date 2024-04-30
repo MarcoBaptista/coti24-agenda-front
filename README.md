@@ -1,27 +1,75 @@
-# AgendaWeb
+# AgendaWeb usando API para Controle de Tarefas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+Este projeto é uma aplicação Angular que permite o gerenciamento de tarefas em uma agenda. Ele se comunica com uma API para criar, listar, atualizar e excluir tarefas.
 
-## Development server
+## Pré-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js e Angular CLI instalados.
+- Conhecimento básico de Angular e APIs REST.
 
-## Code scaffolding
+## Configuração
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone este repositório.
+2. Navegue até a pasta do projeto no terminal.
+3. Execute o seguinte comando para instalar as dependências:
 
-## Build
+```bash
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+4. Configure a URL da API no arquivo `environment.ts`:
 
-## Running unit tests
+```typescript
+export const environment = {
+  production: false,
+  apiUrl: 'URL_DA_API_AQUI',
+};
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Executando o Projeto
 
-## Running end-to-end tests
+1. No terminal, execute o seguinte comando:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+ng serve
+```
 
-## Further help
+2. Acesse a aplicação em `http://localhost:4200`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Estrutura do Projeto
+
+O projeto possui a seguinte estrutura:
+
+```
+my-angular-app/
+  ├── src/
+  │   ├── app/
+  │   │   ├── components/
+  │   │   │   ├── task-list/
+  │   │   │   ├── task-form/
+  │   │   ├── services/
+  │   │   ├── models/
+  │   │   ├── app.component.html
+  │   │   ├── app.component.ts
+  │   │   └── ...
+  │   ├── environments/
+  │   │   ├── environment.ts
+  │   │   └── environment.prod.ts
+  │   ├── index.html
+  │   └── ...
+  ├── package.json
+  └── README.md
+```
+
+## Funcionalidades
+
+- Listagem de tarefas.
+- Adição de novas tarefas.
+- Edição e exclusão de tarefas.
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+
+
+
